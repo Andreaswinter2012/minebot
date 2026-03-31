@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Minebot Library</title>
+    <style>
+        body {
+            font-family: monospace;
+            margin: 40px;
+            background: white;
+            color: black;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Minebot library</h1>
+
+<p>
+Simple Python automation library.
+</p>
+
+<hr>
+
+<h2>install</h2>
+
+<pre>
+- install ohters library
+- pip install pyautogui
+- pip install pydirectinput
+- pip install pillow
+- pip install opencv-python
+- pip install git+https://github.com/Andreaswinter2012/minelib.git and install Git for windows (winget install Git.Git -h)
+</pre>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<pre>
+import minebot
+import time
+
+time.sleep(5)
+
+start = True
+
+while True:
+    while start:
+        minebot.removeblock(3)
+
+        if minebot.chat("r", "stop.png"):
+            start = False
+            break
+
+    if minebot.chat("r", "start.png"):
+        start = True
+</pre>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<pre>
+import minebot
+import time
+
+count = 0
+countin = int(input("count: "))
+
+time.sleep(5)
+
+while count < countin:
+    count += 1
+    minebot.removeblock(1)
+    time.sleep(1.5)
+
+minebot.walk("d", 1)
+minebot.select("2")
+minebot.drop("all")
+minebot.walk("a", 1)
+minebot.select("1")
+</pre>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<pre>
+import minebot
+import time
+
+count = 0
+countin = int(input("count: "))
+
+time.sleep(5)
+
+while count < countin:
+    count += 1
+    minebot.removeblock(1.2)
+    minebot.walk("w", 0.2)
+</pre>
+
+<hr>
+
+<h2>Commands</h2>
+
+<pre>
+removeblock(time)
+walk(key, time)
+select(slot)
+drop(mode)
+chat(mode, image)
+</pre>
+
+<hr>
+
+<p>MineBot Project</p>
+
+</body>
+</html>

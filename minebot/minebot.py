@@ -73,7 +73,7 @@ def jump(sleep):
 def setblock():
     p.mouseDown(button="right")
     time.sleep(0.1)
-    p.mouseUp()
+    p.mouseUp(button="right")
 def select(num):
     pyautogui.typewrite(str(num))
 def drop(mod=""):

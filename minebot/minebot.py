@@ -63,7 +63,7 @@ def chat(key, msg):
             return False
     if key == "w":
         pyautogui.typewrite("t")
-        time.sleep(1)
+        time.sleep(5)
         keyboard.write(str(msg))
         pyautogui.typewrite(["enter"])
 def jump(sleep):

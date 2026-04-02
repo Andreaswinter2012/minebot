@@ -11,5 +11,5 @@ setup(
         "Pillow",
     ],
     author="Andreaswinter2012",
-    description="The open-souce libery for minecraft bot build library",
+    description="The open-souce library for minecraft bot build",
 )

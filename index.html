@@ -42,7 +42,10 @@ Simple Python automation library.
 <hr>
 
 <h2>Example 1</h2>
-
+<video width="640" height="360" controls>
+  <source src="video/1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <pre>
 import minebot
 import time
@@ -66,7 +69,10 @@ while True:
 <hr>
 
 <h2>Example 2</h2>
-
+<video width="640" height="360" controls>
+  <source src="video/2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <pre>
 import minebot
 import time
@@ -91,37 +97,51 @@ minebot.select("1")
 <hr>
 
 <h2>Example 3</h2>
-
+<video width="640" height="360" controls>
+  <source src="video/3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <pre>
-import minebot
 import time
-
+import minebot
+countin = int(input("count:"))
 count = 0
-countin = int(input("count: "))
-
 time.sleep(5)
-
 while count < countin:
     count += 1
     minebot.removeblock(1.2)
     minebot.walk("w", 0.2)
+minebot.chat("w", "/tp Андрей")
+time.sleep(2)
+for i in range(9):
+    minebot.select(str(i+1))
+    minebot.drop("all")
+minebot.select("1")
+
+
 </pre>
 
 <hr>
 
-<h2>Commands</h2>
+<h2>All functions</h2>
 
 <pre>
-removeblock(time)
-walk(key, time)
-select(slot)
-drop(mode)
-chat(mode, image)
+removeblock(time)       # removeblock(2)
+walk(key, time)         # walk("w", 1)
+select(slot)            # select(9) 
+drop(mode)              # drop() or drop("all")
+chat(mode, image)       # chat("w", "Hello World") or chat("r", "image.png")
+press(key)              # press("enter")
+screen(file, conf)      # screen("image.png", 0.9) and return True or False
+click(mod, x, y)        # click("l", 500, 500) or click("r", 500, 500) or click("l")
+find(file, conf)        # find("image.png", 0.9) and return x, y simple (148 167)
+jump(sleep)             # jump(2)
+setblock()              # setblock()
 </pre>
 
 <hr>
 
-<p>MineBot Project</p>
+<p>Minebot Project</p>
 
 </body>
 </html>

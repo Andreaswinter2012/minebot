@@ -1,2 +1,2 @@
 # minebot
-The open-souce libery for minecraft bot build library
+The open-souce library for minecraft bot build
